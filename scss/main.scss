@@ -1,0 +1,64 @@
+@import "../libs/bootstrap/scss/bootstrap.scss";
+
+
+html {
+    height: auto;
+    width: auto;
+}
+
+body {
+    background-image: url("../src/img/background-index.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-joke {
+    padding-top: 9rem !important;
+}
+
+.box-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.button-style {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-style:after {
+    content: "";
+    border-radius: 50px;
+    background-color: rgba(237,201,81,255);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 4px;
+    left: 6px;
+    transition: 0.2s;
+}
+
+.button-style:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .button-style {
+        padding: 13px 50px 13px;
+    }
+}
